@@ -15,6 +15,8 @@
 
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
+\usepackage{pdfpages}
+\usepackage{float}
 
 \title[Neuroanatomy workshop #3]{The Sensory-motor System}
 \author{JJ Torre}
@@ -35,19 +37,28 @@
 \section{Introduction}
 
 \begin{frame}{Introduction}
+ \begin{columns}[T]
+  \begin{column}{.4\textwidth}
+    \begin{itemize}
+      \item The sensory-motor system constitutes our main means of receiving input (sensory
+      stimuli) and producing output (movement) in relation to the environment
+      \item It follows a hierarchical organization common to both motor and sensory systems
+    \end{itemize}
 
-\begin{itemize}
-  \item Your introduction goes here!
-  \item Use \texttt{itemize} to organize your main points.
-\end{itemize}
-
-\vskip 1cm
-
-\begin{block}{Examples}
-Some examples of commonly used commands and features are included, to help you get started.
-\end{block}
-
-\end{frame}
+    \vspace{-.3cm}
+    \begin{block}{\scriptsize Peripheral Nervous System (PNS)}
+    \scriptsize Although we are going to focus on the central nervous system, a lot is going on before reaching the brain! Motor reflexes happen at this level.
+    \end{block}
+  \end{column}
+  \begin{column}{.6\textwidth}
+   \begin{figure}[H]
+   \vspace*{-1.25cm}
+    \includegraphics[width=.85\textwidth]{figures/brain_and_env.png}
+   \end{figure}
+  \end{column}
+ \end{columns}
+    
+    \end{frame}
 
 \section{Some \LaTeX{} Examples}
 
