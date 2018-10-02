@@ -18,7 +18,17 @@
 \usepackage{pdfpages}
 \usepackage{float}
 
-\title[Neuroanatomy workshop #3]{The Sensory-motor System}
+\newenvironment<>{varblock}[2][.9\textwidth]{%
+  \setlength{\textwidth}{#1}
+  \begin{actionenv}#3%
+    \def\insertblocktitle{#2}%
+    \par%
+    \usebeamertemplate{block begin}}
+  {\par%
+    \usebeamertemplate{block end}%
+  \end{actionenv}}
+
+\title[Neuroanatomy workshop 3]{The Sensory-motor System}
 \author{JJ Torre}
 \institute{Parietal Team - INRIA Saclay}
 \date{2018}
@@ -46,9 +56,9 @@
     \end{itemize}
 
     \vspace{-.3cm}
-    \begin{block}{\scriptsize Peripheral Nervous System (PNS)}
-    \scriptsize Although we are going to focus on the central nervous system, a lot is going on before reaching the brain! Motor reflexes happen at this level.
-    \end{block}
+    \begin{varblock}[5cm]{\scriptsize Peripheral Nervous System (PNS)}
+     \scriptsize Although we are going to focus on the central nervous system, a lot is going on before reaching the brain! Motor reflexes happen at this level
+    \end{varblock}
   \end{column}
   \begin{column}{.6\textwidth}
    \begin{figure}[H]
@@ -57,8 +67,33 @@
    \end{figure}
   \end{column}
  \end{columns}
-    
-    \end{frame}
+\end{frame}
+
+\begin{frame}{Primary Areas}
+    \begin{columns}[T]
+  \begin{column}{.4\textwidth}
+    \begin{itemize}
+      \item \small Primary areas receive input directly from the thalamus
+      \item \small Sensory areas receive high-dimensional data for each modality (vision, audition, etc.)
+      \item \small The motor cortex conveys the already planned movement and sends it to the muscles
+      \item \small Primary cortices have the better and most differentiated 6-layer laminar structure
+    \end{itemize}
+  \end{column}
+  \begin{column}{.6\textwidth}
+   \begin{figure}[H]
+    \includegraphics[width=1\textwidth, height=3.5cm]{figures/primary_structures.png}
+   \end{figure}
+   \vskip
+   \begin{varblock}[7cm]{\scriptsize Olfaction is a special boy}
+    \scriptsize Olfaction is the only sense that does not do thalamic relay in its
+    path to the cortex. Signals from the nose go directly to the piriform cortex via the
+    olfactory tract.
+   \end{varblock}
+  \end{column}
+ \end{columns}
+\end{frame}
+
+
 
 \section{Some \LaTeX{} Examples}
 
